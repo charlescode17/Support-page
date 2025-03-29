@@ -1,0 +1,137 @@
+/* Classic Style with Loading */
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #f0e6d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #553311;
+}
+
+.line {
+    border-bottom: 2px solid #8B4513;
+    width: 50px;
+    margin: 10px auto 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.ussd-info {
+    margin-bottom: 20px;
+}
+
+.ussd-code {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+}
+
+.ussd-note {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.support-button {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+    position: relative; /* For loader positioning */
+    overflow: hidden; /* Hide overflowing loader */
+}
+
+.support-button:hover {
+    background-color: #663D1A;
+}
+
+.button-loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.support-button.loading .button-text {
+    display: none;
+}
+
+.support-button.loading .button-loader {
+    display: inline-block;
+}
+
+.instructions {
+    margin-top: 25px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.instructions h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instructions ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+instructions li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .support-button {
+        width: 100%;
+        min-width: unset;
+    }
+}
