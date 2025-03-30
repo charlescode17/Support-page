@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to encode USSD code for URL
     const encodeUSSDCode = (code) => {
-        return encodeURIComponent(code).replace(/%23/g, '#');
+        // return encodeURIComponent(code).replace(/%23/g, '#');
+        return encodeURIComponent(code);
     };
 
     // Function to handle USSD dialing
